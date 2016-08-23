@@ -8,9 +8,6 @@ export default Ember.Route.extend({
     committeeLookup(){
       this.transitionTo('committees');
     },
-    committeeLookup2(){
-      this.transitionTo('committees2');
-    },
     subcommitteeLookup(){
       this.transitionTo('house-subcommittee');
     }

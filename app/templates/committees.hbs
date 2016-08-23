@@ -1,6 +1,11 @@
 <ul>
   {{#each model as |committee|}}
-    <li>{{committee.chamber}}</li>
-    {{#link-to 'senate-subcommittees' committee.parent_committee_id}}<li>{{committee.name}}</li>{{/link-to}}
+    {{#if (eq committee.chamber "senate")}}
+      <li>
+        {{#link-to 'subcommittee' committee.committee_id}}
+        {{committee.name}}
+        {{/link-to}}
+      </li>
+      {{/if}}
   {{/each}}
 </ul>

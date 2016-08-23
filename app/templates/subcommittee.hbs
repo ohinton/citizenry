@@ -1,0 +1,9 @@
+<ul>
+  {{#each model as |subcommittee|}}
+    <li>
+     {{subcommittee.name}}
+    </li>
+    {{else}}
+      I am terribly sorry there are no subcommittees for this committee. Talk to your local congressman to create a new one
+    {{/each}}
+</ul>
