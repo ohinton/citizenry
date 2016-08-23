@@ -1,0 +1,16 @@
+<div class="container">
+  <img src="https://pajamasmed.hs.llnwd.net/e1/trending/user-content/51/files/2016/07/48186492_bill_c.jpg">
+  <hr>
+  <img src="http://i.imgur.com/x0Pkd7U.jpg">
+</div>
+<hr>
+
+<ul>
+  {{#each model as |bill|}}
+    <li>
+      {{#link-to 'bill-details' bill.bill_id}}
+        {{bill.official_title}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+</ul>

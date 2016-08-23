@@ -1,3 +1,4 @@
+<h1>Senate Committees</h1>
 <ul>
   {{#each model as |committee|}}
     {{#if (eq committee.chamber "senate")}}
@@ -8,4 +9,29 @@
       </li>
       {{/if}}
   {{/each}}
+</ul>
+<h1>House Committees</h1>
+<ul>
+{{#each model as |committee|}}
+  {{#if (eq committee.chamber "house")}}
+  <li>
+    {{#link-to 'subcommittee' committee.committee_id}}
+    {{committee.name}}
+    {{/link-to}}
+  </li>
+  {{/if}}
+{{/each}}
+</ul>
+
+<h1>Joint Committees</h1>
+<ul>
+{{#each model as |committee|}}
+  {{#if (eq committee.chamber "joint")}}
+  <li>
+    {{#link-to 'subcommittee' committee.committee_id}}
+    {{committee.name}}
+    {{/link-to}}
+  </li>
+  {{/if}}
+{{/each}}
 </ul>

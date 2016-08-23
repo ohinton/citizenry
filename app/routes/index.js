@@ -10,6 +10,9 @@ export default Ember.Route.extend({
     },
     subcommitteeLookup(){
       this.transitionTo('house-subcommittee');
+    },
+    activebillLookup(){
+      this.transitionTo('bills');
     }
   }
 });
